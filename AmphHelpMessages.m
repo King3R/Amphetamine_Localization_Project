@@ -16,50 +16,50 @@
     
     if (messageSet == 1)
     {
-        [messageContent addObject:@"Quick-Start a Session"];
-        [messageContent addObject:@"Choose whether left clicking (also known as primary clicking) or right clicking (also known as secondary clicking) on Amphetamine's image in the menu bar brings up Amphetamine’s menu or starts/ends a session."];
+        [messageContent addObject:@"Schnellstart einer Sitzung"];
+        [messageContent addObject:@"Wählen Sie, ob ein Linksklick (auch als primärer Klick bezeichnet) oder ein Rechtsklick (auch als sekundärer Klick bezeichnet) auf das Menüleisten-Symbol von Amphetamine das Menü aufruft oder eine Sitzung startet/beendet."];
     }
     else if (messageSet == 2)
     {
-        [messageContent addObject:@"Launch and Wake Behavior"];
-        [messageContent addObject:@"• Launch Amphetamine at Login\nCheck this box if you want Amphetamine to automatically launch when you log in to your Mac.\n\n• Start Session When Amphetamine Launches\nCheck this box if you want Amphetamine to automatically start a new session when the application launches.\n\n• Start Session After Waking From Sleep\nCheck this box if you want Amphetamine start a new session whenever your Mac wakes from sleep. If a session is already running, a new session will not be started."];
+        [messageContent addObject:@"Start- und Aufwachverhalten"];
+        [messageContent addObject:@"• Amphetamine beim Anmelden starten\nKreuzen Sie dieses Kontrollkästchen an, wenn Amphetamine automatisch gestartet werden soll, wenn Sie sich an Ihrem Mac anmelden.\n\n• Sitzung beim Start von Amphetamine starten\nKreuzen Sie dieses Kontrollkästchen an, wenn Amphetamine automatisch eine neue Sitzung starten soll, wenn das Programm startet.\n\n• Sitzung nach Aufwachen aus dem Schlafmodus starten\nKreuzen Sie dieses Kontrollkästchen an, wenn Amphetamine eine neue Sitzung starten soll, wenn Ihr Mac aus dem Schlafmodus aufwacht. Wenn bereits eine Sitzung läuft, wird keine neue Sitzung gestartet."];
     }
     else if (messageSet == 3)
     {
         [messageContent addObject:@"Other"];
         if (@available(macOS 10.14, *))
         {
-            [messageContent addObject:@"• Hide Amphetamine in the Dock\nCheck this box to hide Amphetamine’s icon in the Dock. Make sure to also turn off macOS's 'Show recent apps in Dock' feature in  → System Preferences → Dock\n\n• Use Color to Represent Status in Quick Preferences\nCheck this box to use a colored circle to represent the status of each item in Quick Preferences. Green = ON, Red = OFF. Uncheck this box to use a non-color based image: a checkmark for ON, and an X for OFF.\n\nClick the Reset Warnings and Dialogs button to clear any 'do not show again' flags on warning messages and other dialogs.\n\nClick the Reset All Preferences button to return Amphetamine to a default state (all preferences, including Triggers will be lost)."];
+            [messageContent addObject:@"• Amphetamine im Dock ausblenden\nKreuzen Sie dieses Feld an, um das Amphetamine-Symbol im Dock auszublenden. Stellen Sie sicher, dass Sie auch die Funktion 'Letzte Anwendungen im Dock anzeigen' von macOS unter  → Systemeinstellungen → Dock ausschalten\n\n• Farbe zur Darstellung des Status in den Schnelleinstellungen verwenden\nKreuzen Sie dieses Kontrollkästchen an, um einen farbigen Kreis zur Darstellung des Status jedes Elements in den Schnelleinstellungen zu verwenden. Grün = EIN, Rot = AUS. Deaktivieren Sie dieses Kontrollkästchen, um ein nicht farbbasiertes Bild zu verwenden: ein Häkchen für EIN und ein X für AUS.\n\nKlicken Sie auf die Schaltfläche 'Warnungen und Dialoge zurücksetzen', um alle 'Nicht wieder anzeigen'-Flaggen auf Warnmeldungen und anderen Dialogen zu löschen.\n\nKlicken Sie auf die Schaltfläche 'Alle Einstellungen zurücksetzen', um Amphetamine auf den Standardzustand zurückzusetzen (alle Einstellungen, einschließlich Auslöser, gehen verloren)."];
         }
         else
         {
-            [messageContent addObject:@"• Hide Amphetamine in the Dock\nCheck this box to hide Amphetamine’s icon in the Dock.\n\n• Use Color to Represent Status in Quick Preferences\nCheck this box to use a colored circle to represent the status of each item in Quick Preferences. Green = ON, Red = OFF. Uncheck this box to use a non-color based image: a check mark for ON, and an X for OFF.\n\nClick the Reset Warnings and Dialogs button to clear any 'do not show again' flags on warning messages and other dialogs.\n\nClick the Reset All Preferences button to return Amphetamine to a default state (all preferences, including Triggers will be lost)."];
+            [messageContent addObject:@"• Amphetamin im Dock ausblenden\nKreuzen Sie dieses Kontrollkästchen an, um das Amphetamine-Symbol im Dock auszublenden.\n\n• Farbe zur Darstellung des Status in den Schnelleinstellungen verwenden\nKreuzen Sie dieses Kontrollkästchen an, um den Status der einzelnen Elemente in den Schnelleinstellungen mit einem farbigen Kreis darzustellen. Grün = EIN, Rot = AUS. Deaktivieren Sie dieses Kontrollkästchen, um ein nicht farbbasiertes Bild zu verwenden: ein Häkchen für EIN und ein X für AUS.\n\nKlicken Sie auf die Schaltfläche 'Warnungen und Dialoge zurücksetzen', um alle 'Nicht wieder anzeigen'-Flaggen auf Warnmeldungen und anderen Dialogen zu löschen.\n\nKlicken Sie auf die Schaltfläche 'Alle Einstellungen zurücksetzen', um Amphetamine auf den Standardzustand zurückzusetzen (alle Einstellungen, einschließlich Auslöser, gehen verloren)."];
         }
     }
     else if (messageSet == 4)
     {
-        [messageContent addObject:@"Default Duration"];
-        [messageContent addObject:@"The Default Duration is used throughout Amphetamine when a session duration is not otherwise provided. Examples include when a session starts at launch and when clicking Amphetamine's image in the system menu bar to start a session."];
+        [messageContent addObject:@"Standarddauer"];
+        [messageContent addObject:@"Die Standarddauer wird in Amphetamine verwendet, wenn keine andere Sitzungsdauer angegeben ist. Beispiele sind, wenn eine Sitzung beim Start beginnt und wenn Sie auf das Menüleisten-Symbol von Amphetamine klicken, um eine Sitzung zu starten."];
     }
     else if (messageSet == 5)
     {
-        [messageContent addObject:@"End Time Calculation"];
-        [messageContent addObject:@"Session end time can either be calculated using a timer, or by using the system clock. For example, let's say you select 'Use timer' and then start a session for 3 hours. Then you immediately sleep your Mac for 2 hours. When your Mac wakes, the session will still have 3 hours remaining. This is because the timer is paused while your Mac is sleeping.\n\nIn the same scenario described above, if you had instead selected 'Use system clock' only 1 hour would be remaining on the session. This is because 2 hours would have passed on the system clock while your Mac slept."];
+        [messageContent addObject:@"Berechnung der Endzeit"];
+        [messageContent addObject:@"Die Sitzungsendzeit kann entweder mit einem Timer oder mit der Systemuhr berechnet werden. Angenommen, Sie wählen 'Timer verwenden' und starten dann eine Sitzung für 3 Stunden. Danach wird der Mac sofort für 2 Stunden in den Ruhezustand versetzt. Wenn Ihr Mac aufwacht, sind noch 3 Stunden von der Sitzung übrig. Das liegt daran, dass der Timer angehalten wird, während Ihr Mac schläft. Hätten Sie im oben beschriebenen Szenario stattdessen 'Systemuhr verwenden' ausgewählt, wäre nur noch 1 Stunde von der Sitzung übrig. Das liegt daran, dass 2 Stunden auf der Systemuhr verstrichen wären, während Ihr Mac schläft."];
     }
     else if (messageSet == 6)
     {
-        [messageContent addObject:@"Display Sleep"];
-        [messageContent addObject:@"Check this box if you want your Mac's display to sleep during a session. Note that this preference only affects non-Trigger sessions. If you want Trigger-based sessions to allow your Mac's display to sleep, each individual Trigger can be configured to do so."];
+        [messageContent addObject:@"Ruhezustand Bildschirm"];
+        [messageContent addObject:@"Kreuzen Sie dieses Kontrollkästchen an, wenn Sie möchten, dass der Bildschirm Ihres Macs während einer Sitzung in den Ruhezustand versetzt wird. Beachten Sie, dass diese Einstellung nur für Nicht-Trigger-Sitzungen gilt. Wenn Sie möchten, dass bei Trigger-basierten Sitzungen der Bildschirm Ihres Macs in den Ruhezustand versetzt wird, kann jeder einzelne Trigger so konfiguriert werden, dass er dies tut."];
     }
     else if (messageSet == 7)
     {
-        [messageContent addObject:@"Screen Saver"];
-        [messageContent addObject:@"Check this box if you want your Mac's screen saver to run during a session. Use the slider to select the time threshold before starting the screen saver. During a session, Amphetamine will monitor your Mac for keyboard and mouse movement. After the threshold has passed, Amphetamine will start your screen saver.\n\nYou can add apps to an exceptions list by clicking the 'Exceptions...' button. If an app in the exceptions list is running on your Mac, Amphetamine will not start the screen saver. This can be useful if you're watching a video or reading a long piece of text.\n\nNote that this preference only affects non-Trigger sessions. If you want Trigger-based sessions to allow your screen saver to run, each individual Trigger can be configured to do so."];
+        [messageContent addObject:@"Bildschirmschoner"];
+        [messageContent addObject:@"Kreuzen Sie dieses Kontrollkästchen an, wenn Sie möchten, dass der Bildschirmschoner Ihres Macs während einer Sitzung läuft. Verwenden Sie den Schieberegler, um die Zeitschwelle vor dem Start des Bildschirmschoners auszuwählen. Während einer Sitzung wird Amphetamine Ihren Mac auf Tastatur- und Mausbewegungen überwachen. Nachdem der Schwellenwert überschritten wurde, startet Amphetamine Ihren Bildschirmschoner.\n\nSie können Apps zu einer Ausnahmeliste hinzufügen, indem Sie auf die Schaltfläche 'Ausnahmen...' klicken. Wenn eine App in der Ausnahmeliste auf Ihrem Mac ausgeführt wird, startet Amphetamine den Bildschirmschoner nicht. Dies kann nützlich sein, wenn Sie ein Video ansehen oder einen langen Text lesen.\n\nBeachten Sie, dass diese Einstellung nur für Nicht-Trigger-Sitzungen gilt. Wenn Sie möchten, dass bei Trigger-basierten Sitzungen Ihr Bildschirmschoner läuft, kann jeder einzelne Trigger so konfiguriert werden, dass er dies tut."];
     }
     else if (messageSet == 8)
     {
-        [messageContent addObject:@"Fast User Switching"];
-        [messageContent addObject:@"Check this box to automatically disable all Amphetamine sessions (both Trigger and non-Trigger) when you switch to a different user account on your Mac without logging out of the account under which Amphetamine is running."];
+        [messageContent addObject:@"Schneller Benutzerwechsel"];
+        [messageContent addObject:@"Kreuzen Sie dieses Kontrollkästchen an, um alle Amphetamine-Sitzungen (sowohl Trigger als auch Nicht-Trigger) automatisch zu deaktivieren, wenn Sie auf Ihrem Mac zu einem anderen Benutzerkonto wechseln, ohne sich von dem Konto abzumelden, unter dem Amphetamine läuft."];
     }
     else if (messageSet == 9)
     {
